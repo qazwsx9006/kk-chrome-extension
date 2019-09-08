@@ -1,0 +1,23 @@
+{
+  "name": "KKtix_Public",
+  "version": "1.0",
+  "description": "Build an Extension!",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "icons": {
+    "16": "images/kk16.png",
+    "32": "images/kk32.png",
+    "48": "images/kk48.png",
+    "128": "images/kk128.png"
+  },
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "matches": ["*://kktix.com/*/new"],
+      "js": ["jquery.js", "content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
